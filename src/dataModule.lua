@@ -25,7 +25,7 @@ function DataStore.Set(SavedDataStore, key, value)
 		if Result[1] then
 			return true
 		end
-		-- wait(.75)
+		wait(.75)
 	end
 	warn(Result[2])
 	return false

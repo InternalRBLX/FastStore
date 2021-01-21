@@ -283,6 +283,10 @@ end
 
 function Saving:run()
     coroutine.wrap(function()
+        if _G.IsRunning == true then return end
+
+        _G.IsRunning = true
+        
         Saving:CheckStorages()
         Saving:UpdateData()
         
