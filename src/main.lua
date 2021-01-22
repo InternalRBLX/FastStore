@@ -282,11 +282,10 @@ function Saving:SaveToDataStore(PlayerKey, CurrentData)
 end
 
 function Saving:run()
+    if _G.IsRunning == true then return end
+    _G.IsRunning = true
+    
     coroutine.wrap(function()
-        if _G.IsRunning == true then return end
-
-        _G.IsRunning = true
-        
         Saving:CheckStorages()
         Saving:UpdateData()
         

@@ -5,7 +5,7 @@
 
 ## Example Usage:
 ```typescript
-// SERVER ONLY | I wILL MAKE A CLIENT MODULE SOON \\
+// SERVER ONLY | I WILL MAKE A CLIENT MODULE SOON \\
 import { setSetting, Get, run } from '@rbxts/faststore'
 import { Players, RunService } from '@rbxts/services'
 
@@ -23,19 +23,19 @@ setSetting('defaultSave', AllData)
 setSetting('leaderStats', LeaderStats)
 setSetting('saveKey', 'TESTING_001')
 
-// Runs Data (only use once)
+// Run Data
 run()
 
 // Getting Player Data (you only need to add the if statement if your in studio)
 // Player Argument
-Players.PlayerAdded.Connect(function(plr: Player) {
+Players.PlayerAdded.Connect((plr) => {
     let Data = Get(plr)
-    if (Data === undefined && !RunService.IsStudio) { // (IN STUDIO IT MIGHT NOT LOAD DATA)
+    if (Data === undefined && !RunService.IsStudio()) { // (IN STUDIO IT MIGHT NOT LOAD DATA)
         plr.Kick('Data Did Not Load')
     }
 
     print(Data)
-})
+});
 ```
 
 ## Settings:

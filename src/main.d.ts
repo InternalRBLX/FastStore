@@ -19,7 +19,7 @@ declare class PlayerData {
 	 * Converts The Player UserId into a String
 	 * @param player The Player Who Is Saving
 	 */
-	Get(player: Player): void
+	Get(player: Player): object
 	
 	/**
 	 * Runs The DataStore (ONLY USE THIS ONCE);
@@ -28,8 +28,7 @@ declare class PlayerData {
 	run(): void
 }
 
-type SettingNameTypes = 'defaultSave' | 'saveKey' | 'leaderStats'
-declare function setSetting(settingName: SettingNameTypes, settingValue: string | object): void
+declare function setSetting(settingName: 'defaultSave' | 'saveKey' | 'leaderStats', settingValue: string | object): void
 declare function ConvertToPlayerKey(player: Player): string
 declare function Get(player: Player): object
 declare function run(): void

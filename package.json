@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/faststore",
-  "version": "1.2",
+  "version": "1.2.0",
   "description": "",
   "main": "out/main.lua",
   "dependencies": {},
